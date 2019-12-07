@@ -456,7 +456,7 @@ class BuscarNuevo extends React.Component {
                                     listadoRec.estado = pendiente_estado;
                                     listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
                                     listadoRec.programa = pendienteAsignacion[i].idProg;
-                                    listadoRec.alumnoprog = '00';
+                                    listadoRec.alumnoprog = pendienteAsignacion[i].fnRes;
                                     listadoRec.fasasc = '00';
                                     //funcion alumno programa// falta la funcion 
 
@@ -473,7 +473,7 @@ class BuscarNuevo extends React.Component {
                                     listadoRec.estado = pendiente_estado;
                                     listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
                                     listadoRec.programa = pendienteAsignacion[i].idProg;
-                                    listadoRec.alumnoprog = '00';
+                                    listadoRec.alumnoprog = pendienteAsignacion[i].fnRes;
                                     //funcion alumno programa// falta la funcion 
 
                                 } else {
@@ -498,7 +498,7 @@ class BuscarNuevo extends React.Component {
                                 objPendienteAsignacion: lista,
                             })
                             console.log("---ObjPendienteAsignacion---");
-                            console.log(this.state.objPendienteAsignacion);
+                            console.log("---sasas0",this.state.objPendienteAsignacion);
                             if (this.state.objPendienteAsignacion.length > 0) {
                                 this.setState({
                                     buscarPendiente: true
