@@ -426,7 +426,8 @@ class BuscarNuevo extends React.Component {
                                     programa: '',
                                     descripcion: '',
                                     alumnoprog: '',
-                                    fasasc: ''
+                                    fasasc: '',
+                                    fnRes: '',
                                 }
 
                                 let pendiente_estado;
@@ -487,7 +488,7 @@ class BuscarNuevo extends React.Component {
                                     listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
                                     listadoRec.programa = pendienteAsignacion[i].idProg;
                                     listadoRec.alumnoprog = pendienteAsignacion[i].fnRes;
-                                    listadoRec.moneda = pendienteAsignacion[i].moneda;
+                                    listadoRec.moneda    = pendienteAsignacion[i].moneda;
                                 }
                                 lista.push(listadoRec);
 
