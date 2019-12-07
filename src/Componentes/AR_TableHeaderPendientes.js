@@ -10,10 +10,11 @@ class AR_tableHeaderPendientes extends React.Component {
         return(
             <thead>
                 <tr>
+                    <th className="th">Nro</th>
                     <th className="th">ID_REC</th>
                     <th className="th">Descripcion</th>
                     <th className="th">apellidos y nombres</th>
-                    <th className="th">funcion</th>
+                    <th className="th" >funcion</th>
                     <th className="th">Concepto</th>
                     {/* <th className="th">Codigo alumno</th> */}
                     

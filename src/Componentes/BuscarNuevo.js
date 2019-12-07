@@ -411,8 +411,10 @@ class BuscarNuevo extends React.Component {
                                 desc.push(conceptos[index]);
 
                             }
+                            // Find here
                             for (let i = 0; i < pendienteAsignacion.length; i++) {
                                 var listadoRec = {
+                                    indice: '',
                                     apeNom: '',
                                     concepto: '',
                                     fecha: '',
@@ -445,6 +447,7 @@ class BuscarNuevo extends React.Component {
                                 }
                                 if (pendienteAsignacion[i].moneda == '108') {
 
+                                    listadoRec.indice = i+1;
                                     listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                                     listadoRec.concepto = pendienteAsignacion[i].concepto;
                                     listadoRec.fecha = pendienteAsignacion[i].fecha;
@@ -462,6 +465,7 @@ class BuscarNuevo extends React.Component {
 
                                 } else if (pendienteAsignacion[i].moneda == '113') {
 
+                                    listadoRec.indice = i+1;
                                     listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                                     listadoRec.concepto = pendienteAsignacion[i].concepto;
                                     listadoRec.fecha = pendienteAsignacion[i].fecha;
@@ -477,6 +481,7 @@ class BuscarNuevo extends React.Component {
                                     //funcion alumno programa// falta la funcion 
 
                                 } else {
+                                    listadoRec.indice = i+1;
                                     listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                                     listadoRec.concepto = pendienteAsignacion[i].concepto;
                                     listadoRec.fecha = pendienteAsignacion[i].fecha;
@@ -700,6 +705,7 @@ class BuscarNuevo extends React.Component {
                                     <AR_tableHeaderRecibo />
                                     <tbody>
                                         <tr>
+                                            {/* Tabla de busqueda nombre */}
                                             <td className="td1">{1}</td>
                                             <td className="td1">{this.state.detalleRecaudaciones.apeNom}</td>
                                             <td className="td1">{this.state.detalleRecaudaciones.concepto}</td>
