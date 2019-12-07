@@ -11,7 +11,7 @@ class AR_tableHeaderPendientes extends React.Component {
             <thead>
                 <tr>
                     <th className="th">Nro</th>
-                    <th className="th">ID_REC</th>
+                    <th className="th">Nro Recibo</th>
                     <th className="th">Descripcion</th>
                     <th className="th">apellidos y nombres</th>
                     <th className="th" >funcion</th>
