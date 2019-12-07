@@ -476,6 +476,7 @@ class BuscarNuevo extends React.Component {
                                     //funcion alumno programa// falta la funcion 
 
                                 } else {
+¿
                                     listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                                     listadoRec.concepto = pendienteAsignacion[i].concepto;
                                     listadoRec.fecha = pendienteAsignacion[i].fecha;
@@ -486,7 +487,7 @@ class BuscarNuevo extends React.Component {
                                     listadoRec.estado = pendiente_estado;
                                     listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
                                     listadoRec.programa = pendienteAsignacion[i].idProg;
-                                    listadoRec.alumnoprog = '00';
+                                    listadoRec.alumnoprog = pendienteAsignacion[i].fnRes;
                                     listadoRec.moneda = pendienteAsignacion[i].moneda;
                                 }
                                 lista.push(listadoRec);
