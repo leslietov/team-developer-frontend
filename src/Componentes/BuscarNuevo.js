@@ -363,11 +363,13 @@ class BuscarNuevo extends React.Component {
         var fechaInicio = this.fechaInicio.value;
         var fechaFin = this.fechaFin.value;
         //agregar conceptos para filtros
-        var concepto= this.concepto.value;
+        var concepto = this.concepto.value;
         console.log(concepto);
         
-        let listaconceptos=concepto.split(',').join('-');
-        console.log(listaconceptos);
+        var arrayConcepto = concepto.split(',');
+        let listaconceptos = arrayConcepto.join("','");
+        listaconceptos = "'" + listaconceptos + "'";
+        
         var lista = [];
 
         if (!fechaInicio && !fechaFin) {
@@ -391,8 +393,8 @@ class BuscarNuevo extends React.Component {
                 apeMat: '',
                 nombre: '',
             })
-            console.log(CONFIG + 'recaudaciones/listarPendientes/' + fechaInicio + '/' + fechaFin+'&'+listaconceptos);
-            fetch(CONFIG + 'recaudaciones/listarPendientes/' + fechaInicio + '/' + fechaFin+'&'+listaconceptos)/*PONER PARAMETROS LAS FECHAS Y LISTO*/
+            console.log(CONFIG + 'recaudaciones/listarPendientesConcepto/' + fechaInicio + '/' + fechaFin+'?codes='+listaconceptos);
+            fetch(CONFIG + 'recaudaciones/listarPendientesConcepto/' + fechaInicio + '/' + fechaFin+'?codes='+listaconceptos)/*PONER PARAMETROS LAS FECHAS Y LISTO*/
                 .then((response) => {
                     return response.json();
                 })
@@ -474,23 +476,18 @@ class BuscarNuevo extends React.Component {
                                     //funcion alumno programa// falta la funcion 
 
                                 } else {
-
                                     listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                                     listadoRec.concepto = pendienteAsignacion[i].concepto;
                                     listadoRec.fecha = pendienteAsignacion[i].fecha;
                                     listadoRec.id_rec = pendienteAsignacion[i].idRec;
                                     listadoRec.numero = pendienteAsignacion[i].numero;
                                     listadoRec.idAlum = pendienteAsignacion[i].idAlum;
-                                    listadoRec.moneda = ' ';
                                     listadoRec.importe = pendienteAsignacion[i].importe;
                                     listadoRec.estado = pendiente_estado;
                                     listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
                                     listadoRec.programa = pendienteAsignacion[i].idProg;
                                     listadoRec.alumnoprog = '00';
-                                    //FALTA id_registro
-                                    //falta fn_esunalumnoprogra
-                                    //falta cod_alumno
-                                    //funcion alumno programa// falta la funcion 
+                                    listadoRec.moneda = pendienteAsignacion[i].moneda;
                                 }
                                 lista.push(listadoRec);
 

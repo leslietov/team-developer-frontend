@@ -15,12 +15,12 @@ class AR_tableHeaderPendientes extends React.Component {
                     <th className="th">apellidos y nombres</th>
                     <th className="th">funcion</th>
                     <th className="th">Concepto</th>
-                    <th className="th">Codigo alumno</th>
+                    {/* <th className="th">Codigo alumno</th> */}
                     
                     <th className="th">Fecha</th>                    
                     <th className="th">Importe</th>
                     <th className="th">Numero</th>
-                    <th className="th">Id_Registro</th>
+                    {/* <th className="th">Id_Registro</th> */}
                     <th className="th">Moneda</th>
                     {/* <th className="th">Código Alumno</th>
                     <th className="th">Programa</th>
