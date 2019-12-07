@@ -476,7 +476,6 @@ class BuscarNuevo extends React.Component {
                                     //funcion alumno programa// falta la funcion 
 
                                 } else {
-¿
                                     listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                                     listadoRec.concepto = pendienteAsignacion[i].concepto;
                                     listadoRec.fecha = pendienteAsignacion[i].fecha;
